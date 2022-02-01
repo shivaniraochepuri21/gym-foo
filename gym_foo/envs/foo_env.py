@@ -60,8 +60,8 @@ class FooEnv(gym.Env):
 
     def reset(self):
         high = np.array([np.pi, 1])
-        # self.state = self.np_random.uniform(low=-high, high=high) #training
-        self.state = np.array([np.deg2rad(179), 0.0]) #testing
+        self.state = self.np_random.uniform(low=-high, high=high) #training
+#         self.state = np.array([np.deg2rad(179), 0.0]) #testing
         self.last_u = None
         return self._get_obs()
 
